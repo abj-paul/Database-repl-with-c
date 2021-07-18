@@ -1,0 +1,4 @@
+* What I have learnt in this project
+1) what are size_t datatype and why do we use it
+2) Use of enum to declare a set of contants to increase readability of the code.
+3) How linecode increases the length of buffer depending on user input.
