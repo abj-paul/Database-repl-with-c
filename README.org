@@ -1,10 +1,16 @@
 * What I have learnt in this project
-1) what are size_t datatype and why do we use it
-2) Use of enum to declare a set of contants to increase readability of the code.
-3) How linecode increases the length of buffer depending on user input.
+1) what are ~size_t~ datatype and why do we use it
+2) Use of ~enum~ to declare a set of contants to increase readability of the code.
+3) How ~getline()~ increases the length of buffer depending on user input.
+4) use of ~EXIT_FAILURE~ and ~EXIT_SUCCESS~ macros.
+5) How does ~memcpy()~ work.
+6) [[https://stackoverflow.com/questions/20100816/which-is-a-better-choice-to-exit-a-console-freeconsole-void-return-0-or][Difference between ~return~ and ~exit()~ in C and C++]]
 * How it works
 ** Meta Commands
 Like in sql, some commands start with a dot(.). They are called meta commands. For example,
 1) .exit
+** Features
+1) It can insert row and print all rows.
 * Personal notes for project
 1) dont use ~typedef~ when you implement the project yourself.
+2) My output should be -> getting bytecode, executing bytecode(CHECKED). Also, test execute_statement default switch case.
