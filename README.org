@@ -7,13 +7,11 @@
 6) [[https://stackoverflow.com/questions/20100816/which-is-a-better-choice-to-exit-a-console-freeconsole-void-return-0-or][Difference between ~return~ and ~exit()~ in C and C++]]
 ** uint32_t
 unsigned int of 32 bit. We use that instead of integer because the ~size~ of ~int~ may vary accross compilers and it will create problem for us to access ~dynamic memory~. So we need to ensure our variable is unsigned 32 bit. Thats why we use ~uint32_t~.
-** What does it mean? ((Struct*)0)->attribute
-~0~ acts like null pointer constant. We are casting it to Struct* pointer. As a result, we can access its elements by 0->element.
-We do that to access the structure property without creating any variable manually. We use the default variables.
 ** Use const for global constants
 We use ~const~ keyword to decalre global constants. ~const~ does not mean its a ~read-only~ variable. It can change value anywhere. But its not recommended. Compiler will raise ~warnings~ in such cases. Thus, we can be aware of places in which we have changed the variable and fix appropriately.
 --> When you use const variable in header file, make it ~static~. Else it will give re-definition error.
 * How it works
+  This program can store data in rows in dynamic memory. And then extract those datas. Its versatile. The commands it supports are -> ~insert~, ~select~, ~.exit~ and it handles all possible ~exceptions~.
 ** Meta Commands
 Like in sql, some commands start with a dot(.). They are called meta commands. For example,
 1) .exit
@@ -24,3 +22,6 @@ Like in sql, some commands start with a dot(.). They are called meta commands. F
 1) dont use ~typedef~ when you implement the project yourself.
 2) My output should be -> getting bytecode, executing bytecode(CHECKED). Also, test execute_statement default switch case.
 3) [[https://stackoverflow.com/questions/2987207/why-do-i-get-a-c-malloc-assertion-failure][Error in malloc allocation.]]
+** What does it mean? ((Struct*)0)->attribute
+~0~ acts like null pointer constant. We are casting it to Struct* pointer. As a result, we can access its elements by 0->element.
+We do that to access the structure property without creating any variable manually. We use the default variables.
