@@ -21,4 +21,4 @@ table_properties.o: table_properties.c
 	@gcc -c table_properties.c
 clean:
 	@echo 'Cleaning object files.'
-	@rm *.o
+	@rm *.o launcher.run

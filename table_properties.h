@@ -12,8 +12,8 @@
 // Our table will only store this data structure FOR NOW.
 typedef struct {
   uint32_t id;
-  char username[COLUMN_USERNAME_SIZE];
-  char email[COLUMN_EMAIL_SIZE];
+  char username[COLUMN_USERNAME_SIZE+1]; //For null terminator
+  char email[COLUMN_EMAIL_SIZE+1];
 }Row;
 
 #define size_of_attribute(StructPtr, Attribute) sizeof(((StructPtr*)0)->Attribute)

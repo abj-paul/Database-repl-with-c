@@ -34,6 +34,12 @@ int main(void){
       case PREPARE_SYNTAX_ERROR:
         printf("Failed to convert to bytecode, Syntax error in command '%s'\n",input_buffer->buffer);
         continue;
+      case PREPARE_STRING_TOO_LONG:
+        printf("Too long String!\n");
+        continue;
+      case PREPARE_NEGATIVE_ID:
+        printf("Student ID can't be negative!\n");
+        continue;
       }
 
       // Now execute the bytecode.
