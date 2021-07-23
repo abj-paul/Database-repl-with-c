@@ -3,7 +3,14 @@
 
 // We need Statement datatype in some functions, (because we execute statement/bytecode)
 #include "prepare_statement.h"
+typedef enum{
+  EXECUTE_SUCCESS,
+  EXECUTE_FAILURE,
+  EXECUTE_TABLE_FULL
+}ExecuteResult;
 
-void execute_statement(Statement* );
+ExecuteResult execute_insert(Statement* , Table* );
+ExecuteResult execute_select(Statement* , Table* );
+ExecuteResult execute_statement(Statement* , Table* );
 
 #endif

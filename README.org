@@ -5,12 +5,22 @@
 4) use of ~EXIT_FAILURE~ and ~EXIT_SUCCESS~ macros.
 5) How does ~memcpy()~ work.
 6) [[https://stackoverflow.com/questions/20100816/which-is-a-better-choice-to-exit-a-console-freeconsole-void-return-0-or][Difference between ~return~ and ~exit()~ in C and C++]]
+** uint32_t
+unsigned int of 32 bit. We use that instead of integer because the ~size~ of ~int~ may vary accross compilers and it will create problem for us to access ~dynamic memory~. So we need to ensure our variable is unsigned 32 bit. Thats why we use ~uint32_t~.
+** What does it mean? ((Struct*)0)->attribute
+~0~ acts like null pointer constant. We are casting it to Struct* pointer. As a result, we can access its elements by 0->element.
+We do that to access the structure property without creating any variable manually. We use the default variables.
+** Use const for global constants
+We use ~const~ keyword to decalre global constants. ~const~ does not mean its a ~read-only~ variable. It can change value anywhere. But its not recommended. Compiler will raise ~warnings~ in such cases. Thus, we can be aware of places in which we have changed the variable and fix appropriately.
+--> When you use const variable in header file, make it ~static~. Else it will give re-definition error.
 * How it works
 ** Meta Commands
 Like in sql, some commands start with a dot(.). They are called meta commands. For example,
 1) .exit
 ** Features
 1) It can insert row and print all rows.
+2) If the table is big, then its split into multiple ~pages~. We declared a dynamic page size ~4kb~. Because most computer architechture uses 4kb sized pages in their ~virtual memory~, meaning the OS will move our page in and out of virtual memory as a whole units instead of breaiubg them up.
 * Personal notes for project
 1) dont use ~typedef~ when you implement the project yourself.
 2) My output should be -> getting bytecode, executing bytecode(CHECKED). Also, test execute_statement default switch case.
+3) [[https://stackoverflow.com/questions/2987207/why-do-i-get-a-c-malloc-assertion-failure][Error in malloc allocation.]]
